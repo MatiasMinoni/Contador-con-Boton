@@ -52,7 +52,7 @@ setStock(stock-1);
 return (
 <>
 
-<div class="valign-wrapper center-align contador_carrito">
+<div className="valign-wrapper center-align contador_carrito">
 
 <p>Agregar al carrito</p>
 
