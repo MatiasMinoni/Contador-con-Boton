@@ -5,37 +5,46 @@ import './App.css';
 
 
 
-export const MiComponente =( {miNumero}) => {
-    const add_Cart=document.getElementById("addCart");
+export const MiComponente =( ) => {
+
     const [stock, setStock] = useState(1);
-    
+
 function onAdd(){
-        onRemove.disabled=false;
-        onRemove.disabled=true;
-    add_Cart.disabled=false;
-    add_Cart.disabled=true;
+        
 setStock(stock+1);
 onAdd=document.getElementById("onAdd")
-    console.log(stock);
+onRemove=document.getElementById("onRemove")
+const add_Cart=document.getElementById("addCart");
 
-        
-    if
-    (stock>=10){
+onAdd.disabled=false;
+onRemove.disabled=false;
+add_Cart.disabled=false;
+
+    while
+    (stock>8){
         setStock(10);
       onAdd.disabled=true;
-        onRemove.disabled=false;}
+        onRemove.disabled=false;
+        
+        break;}
+      
 }
 function onRemove(){
-
+    onAdd=document.getElementById("onAdd")
+    onRemove=document.getElementById("onRemove")
+    const add_Cart=document.getElementById("addCart");
 setStock(stock-1);
-onRemove=document.getElementById("onRemove")
-    console.log(stock);
+
+
     onAdd.disabled=false;
-    if (stock<=1){   
+    while (stock<=1){   
         setStock(0);
-      console.log("llegue")
-      add_Cart.disabled=true;
-      onRemove.disabled=true;
+        onAdd.disabled=false;
+        onRemove.disabled=true;
+        add_Cart.disabled=true;
+       break;
+    }
+    if(stock<=1){
        
     }
 }
